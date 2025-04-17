@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,22 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AnonWallets - Private Crypto Wallets</title>
   <meta name="description" content="Explore anonymous and privacy-focused crypto wallets. Find the best tools for secure, trace-free transactions.">
-
-  <!-- Open Graph metadata -->
-  <meta property="og:title" content="AnonWallets - Private Crypto Wallets">
-  <meta property="og:description" content="Top privacy wallets for crypto users who care about anonymity and security.">
-  <meta property="og:image" content="https://anonwallets.vercel.app/logo.png">
-  <meta property="og:url" content="https://anonwallets.vercel.app">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card metadata -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AnonWallets - Private Crypto Wallets">
-  <meta name="twitter:description" content="Top privacy wallets for crypto users who care about anonymity and security.">
-  <meta name="twitter:image" content="https://anonwallets.vercel.app/logo.png">
-
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="https://anonwallets.vercel.app/logo.png" type="image/png" />
 </head>
 <body class="fade-in">
   <header class="glow-header">
@@ -36,35 +20,21 @@
   </header>
 
   <section class="wallets">
-    <div class="wallet-card">
-      <h2>Monero GUI Wallet</h2>
-      <p>Official wallet for Monero, built for true privacy and anonymity.</p>
-      <a href="https://www.getmonero.org/downloads/" class="btn" target="_blank">Official Site</a>
-    </div>
+    <div class="wallet-card"><h2>Monero GUI Wallet</h2><p>Official wallet for Monero, built for true privacy and anonymity.</p><a href="https://www.getmonero.org/downloads/" class="btn" target="_blank">Official Site</a></div>
+    <div class="wallet-card"><h2>Samourai Wallet</h2><p>Android wallet with strong coin-mixing and privacy features.</p><a href="https://samouraiwallet.com/" class="btn" target="_blank">Official Site</a></div>
+    <div class="wallet-card"><h2>Wasabi Wallet</h2><p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p><a href="https://www.wasabiwallet.io/" class="btn" target="_blank">Official Site</a></div>
+    <div class="wallet-card"><h2>Ledger Nano X</h2><p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p><a href="https://shop.ledger.com/?r=23c3e3baff0d" class="btn" target="_blank">Buy via Ledger</a></div>
+    <div class="wallet-card"><h2>Trezor Model T</h2><p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p><a href="https://affil.trezor.io/aff_c?offer_id=239&aff_id=35816" class="btn" target="_blank">Buy via Trezor</a></div>
+  </section>
 
-    <div class="wallet-card">
-      <h2>Samourai Wallet</h2>
-      <p>Android wallet with strong coin-mixing and privacy features.</p>
-      <a href="https://samouraiwallet.com/" class="btn" target="_blank">Official Site</a>
+  <section class="sponsor-suggestion">
+    <h2>Suggest a Wallet or Sponsor a Listing</h2>
+    <p>Know a great privacy wallet that's missing? Or want your tool featured here?</p>
+    <div class="sponsor-actions">
+      <a href="mailto:admin@anonwallets.vercel.app?subject=Wallet Suggestion" class="btn">Suggest a Wallet</a>
+      <a href="mailto:admin@anonwallets.vercel.app?subject=Sponsor Listing Inquiry" class="btn sponsor">Sponsor a Listing</a>
     </div>
-
-    <div class="wallet-card">
-      <h2>Wasabi Wallet</h2>
-      <p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p>
-      <a href="https://www.wasabiwallet.io/" class="btn" target="_blank">Official Site</a>
-    </div>
-
-    <div class="wallet-card">
-      <h2>Ledger Nano X</h2>
-      <p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p>
-      <a href="https://shop.ledger.com/?r=23c3e3baff0d" class="btn" target="_blank">Buy via Ledger</a>
-    </div>
-  
-    <div class="wallet-card">
-      <h2>Trezor Model T</h2>
-      <p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p>
-      <a href="https://affil.trezor.io/aff_c?offer_id=239&aff_id=35816" class="btn" target="_blank">Buy via Trezor</a>
-    </div>
+    <p class="disclaimer">We only list tools that respect user privacy and have no tracking. Sponsorship does not guarantee inclusion.</p>
   </section>
 
   <footer>
@@ -72,9 +42,3 @@
   </footer>
 </body>
 </html>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.body.classList.add("fade-in");
-  });
-</script>
