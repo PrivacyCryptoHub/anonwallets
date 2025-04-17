@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,11 +30,18 @@
 
   <section class="sponsor-suggestion">
     <h2>Suggest a Wallet or Sponsor a Listing</h2>
-    <p>Know a great privacy wallet that's missing? Or want your tool featured here?</p>
-    <div class="sponsor-actions">
-      <a href="mailto:admin@anonwallets.vercel.app?subject=Wallet Suggestion" class="btn">Suggest a Wallet</a>
-      <a href="mailto:admin@anonwallets.vercel.app?subject=Sponsor Listing Inquiry" class="btn sponsor">Sponsor a Listing</a>
-    </div>
+    <p>Know a great privacy wallet or want to sponsor a listing? Use the form below.</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <select name="type" required>
+        <option value="">Select Topic</option>
+        <option value="suggestion">Suggest a Wallet</option>
+        <option value="sponsorship">Sponsor a Listing</option>
+      </select>
+      <textarea name="message" placeholder="Your message..." rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
     <p class="disclaimer">We only list tools that respect user privacy and have no tracking. Sponsorship does not guarantee inclusion.</p>
   </section>
 
