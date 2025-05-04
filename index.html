@@ -1,14 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnonWallets - Secure Your Crypto</title>
-  <meta property="og:title" content="AnonWallets - Secure Your Crypto">
-  <meta property="og:description" content="Find the best anonymous wallets to protect your privacy and security.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/anonwallets-logo.png">
-  <meta property="og:url" content="https://privacycryptohub.github.io/anonwallets/">
-  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="AnonWallets - Secure Your Crypto" />
+  <meta property="og:description" content="Find the best anonymous wallets to protect your privacy and security." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/anonwallets-logo.png" />
+  <meta property="og:url" content="https://privacycryptohub.github.io/anonwallets/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,130 +21,175 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-  <link rel="stylesheet" href="styles.css">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: white;
+      color: #fff;
       background: url('https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/background.png') no-repeat center center fixed;
       background-size: cover;
+      overflow-x: hidden;
     }
+    a { color: cyan; font-weight: bold; }
+
     .logo-container {
       background-color: rgba(0, 255, 255, 0.1);
       border-radius: 25px;
-      padding: 20px;
-      margin: 40px auto;
-      max-width: 400px;
       text-align: center;
+      margin: 40px auto 20px;
+      width: 300px;
+      padding: 20px;
     }
     .logo-container img {
       width: 100%;
-      max-width: 300px;
-    }
-    .section, .wallet-card {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      margin: 20px;
       border-radius: 20px;
+    }
+
+    .section {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+    }
+    h1, h2 {
+      color: cyan;
+      text-align: center;
     }
     .wallet-card {
+      background-color: rgba(0, 0, 0, 0.7);
       border: 1px solid cyan;
+      padding: 15px;
+      margin: 10px auto;
+      border-radius: 10px;
+      max-width: 500px;
     }
-    .wallet-card a {
-      color: cyan;
-      font-weight: bold;
-    }
+
     .footer {
+      background: rgba(0, 0, 0, 0.7);
       text-align: center;
-      font-size: 0.9em;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      margin-top: 40px;
+      padding: 15px;
+      font-size: 14px;
     }
-    .cold-info {
-      background: rgba(0, 0, 0, 0.7);
+
+    /* Cold Wallets Section */
+    .cold-wallets {
+      background: rgba(0,0,0,0.6);
+      border-radius: 15px;
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cold-wallets h2 {
       color: cyan;
-      border-radius: 20px;
-      padding: 20px;
-      margin: 40px 20px;
-      position: relative;
-      text-align: center;
-      min-height: 140px;
     }
-    .cold-info .text {
-      opacity: 1;
-      transition: opacity 0.6s ease-in-out;
+    .cold-content {
+      font-size: 18px;
+      color: cyan;
+      min-height: 60px;
+      transition: opacity 1s ease-in-out;
     }
-    .cold-info .nav {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      padding: 0 15px;
+    .nav-buttons {
+      margin-top: 10px;
     }
-    .cold-info button {
+    .nav-buttons button {
       background: none;
-      border: none;
+      border: 1px solid cyan;
       color: cyan;
-      font-size: 24px;
+      padding: 5px 15px;
+      font-size: 20px;
       cursor: pointer;
+      margin: 0 10px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
   <div class="logo-container">
-    <img src="anonwallets-logo.png" alt="AnonWallets Logo">
+    <img src="https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/anonwallets-logo.png" alt="AnonWallets Logo" />
   </div>
-  <h1 style="text-align:center; color: cyan">AnonWallets</h1>
-  <p style="text-align:center">Protect your privacy. Choose the right crypto wallet.</p>
 
-  <!-- ... existing sections/cards stay unchanged ... -->
+  <h1>AnonWallets</h1>
+  <p style="text-align:center;">Protect your privacy. Choose the right crypto wallet.</p>
 
-  <div class="cold-info">
-    <div class="text" id="coldText">Cold wallets are offline and protect you from online hacks.</div>
-    <div class="nav">
-      <button onclick="prevCold()">&#8592;</button>
-      <button onclick="nextCold()">&#8594;</button>
+  <div class="section">
+    <h2>Why Anonymous Wallets?</h2>
+    <p>
+      Privacy isn't just a feature — it's a right. <strong>AnonWallets</strong> helps users take control of their
+      financial sovereignty by guiding them through trusted and secure wallet options, without KYC, tracking, or marketing fluff.
+    </p>
+  </div>
+
+  <div class="wallet-card">
+    <h3>Monero GUI Wallet</h3>
+    <p>Official wallet for Monero, built for true privacy and anonymity.</p>
+    <a href="https://www.getmonero.org/downloads/" target="_blank">Official Site</a>
+  </div>
+  <div class="wallet-card">
+    <h3>Samourai Wallet</h3>
+    <p>Android wallet with strong coin-mixing and privacy features.</p>
+    <a href="https://samouraiwallet.com/" target="_blank">Official Site</a>
+  </div>
+  <div class="wallet-card">
+    <h3>Wasabi Wallet</h3>
+    <p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p>
+    <a href="https://wasabiwallet.io/" target="_blank">Official Site</a>
+  </div>
+  <div class="wallet-card">
+    <h3>Ledger Nano X</h3>
+    <p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p>
+    <a href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy via Ledger</a>
+  </div>
+  <div class="wallet-card">
+    <h3>Trezor Model T</h3>
+    <p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p>
+    <a href="https://trezor.io/trezor-safe-3-bitcoin-only?transaction_id=102ce1e13cfc323e0a78ae1f740267&offer_id=239&affiliate_id=35816" target="_blank">Buy via Trezor</a>
+  </div>
+
+  <div class="cold-wallets">
+    <h2>What Are Cold Wallets?</h2>
+    <div id="coldContent" class="cold-content">They keep your private keys away from internet access.</div>
+    <div class="nav-buttons">
+      <button onclick="prevCold()">←</button>
+      <button onclick="nextCold()">→</button>
     </div>
   </div>
 
   <div class="footer">
-    &copy; 2025 AnonWallets. No tracking. No compromise.<br>
-    Contact: <a href="mailto:anonwallets@protonmail.com">anonwallets@protonmail.com</a><br>
+    &copy; 2025 AnonWallets. No tracking. No compromise.<br />
+    Contact: <a href="mailto:anonwallets@protonmail.com">anonwallets@protonmail.com</a><br />
     Contribute or suggest: <a href="https://github.com/PrivacyCryptoHub/anonwallets" target="_blank">GitHub Repo</a>
   </div>
 
   <script>
     const coldTexts = [
-      "Cold wallets are offline and protect you from online hacks.",
       "They keep your private keys away from internet access.",
-      "Hardware wallets are a form of cold storage.",
-      "Using cold wallets helps preserve anonymity and privacy.",
-      "Cold storage is essential for long-term crypto safety."
+      "Cold wallets are ideal for long-term storage and maximum security.",
+      "They include hardware wallets, paper wallets, and air-gapped devices.",
+      "No online exposure means reduced risk of hacking."
     ];
-    let coldIndex = 0;
-    const coldEl = document.getElementById('coldText');
+    let current = 0;
+    const content = document.getElementById('coldContent');
 
-    function updateColdText() {
-      coldEl.style.opacity = 0;
+    function updateColdContent(index) {
+      content.style.opacity = 0;
       setTimeout(() => {
-        coldEl.textContent = coldTexts[coldIndex];
-        coldEl.style.opacity = 1;
-      }, 300);
+        content.textContent = coldTexts[index];
+        content.style.opacity = 1;
+      }, 500);
     }
     function nextCold() {
-      coldIndex = (coldIndex + 1) % coldTexts.length;
-      updateColdText();
+      current = (current + 1) % coldTexts.length;
+      updateColdContent(current);
     }
     function prevCold() {
-      coldIndex = (coldIndex - 1 + coldTexts.length) % coldTexts.length;
-      updateColdText();
+      current = (current - 1 + coldTexts.length) % coldTexts.length;
+      updateColdContent(current);
     }
-    setInterval(nextCold, 5000);
+    setInterval(() => nextCold(), 5000);
   </script>
 </body>
 </html>
