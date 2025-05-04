@@ -13,45 +13,53 @@
       background: url('images/background.png') no-repeat center center fixed;
       background-size: cover;
     }
+
     .logo-container {
       background-color: rgba(0, 255, 255, 0.1);
-      padding: 20px;
+      padding: 30px;
       border-radius: 30px;
       text-align: center;
-      margin: 20px auto;
-      max-width: 300px;
+      margin: 30px auto 10px;
+      width: 320px;
     }
+
     .logo-container img {
       width: 100%;
       height: auto;
     }
+
     .title {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin: 10px 0;
     }
+
     .subtitle {
       text-align: center;
       font-size: 1.2rem;
       margin-bottom: 40px;
     }
+
     .section {
       background-color: rgba(0, 0, 0, 0.6);
       margin: 20px;
       padding: 20px;
       border-radius: 20px;
     }
+
     .section h2 {
       color: cyan;
       text-align: center;
     }
+
     .wallet-cards {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 20px;
       padding: 20px;
     }
+
     .card {
       background-color: rgba(0, 0, 0, 0.5);
       padding: 20px;
@@ -60,6 +68,7 @@
       box-shadow: 0 0 15px cyan;
       text-align: center;
     }
+
     .card button {
       margin-top: 10px;
       background-color: cyan;
@@ -68,7 +77,9 @@
       padding: 10px 20px;
       border-radius: 10px;
       cursor: pointer;
+      font-weight: bold;
     }
+
     .carousel {
       background-color: rgba(0, 0, 0, 0.7);
       padding: 30px;
@@ -77,14 +88,19 @@
       border-radius: 20px;
       margin: 40px 20px;
       position: relative;
+      transition: all 0.5s ease-in-out;
     }
+
     .carousel-text {
       font-size: 1.2rem;
       min-height: 60px;
+      transition: opacity 0.6s ease-in-out;
     }
+
     .carousel-buttons {
       margin-top: 20px;
     }
+
     .carousel-buttons button {
       background: none;
       border: 2px solid cyan;
@@ -95,17 +111,25 @@
       font-size: 1.2rem;
       cursor: pointer;
     }
-    @media (max-width: 768px) {
-      .wallet-cards {
-        flex-direction: column;
-        align-items: center;
-      }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.6);
+      color: cyan;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: cyan;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="logo-container">
-    <img src="anonwallets-logo.png" alt="AnonWallets Logo">
+    <img src="images/anonwallets-logo.png" alt="AnonWallets Logo">
   </div>
   <div class="title">AnonWallets</div>
   <div class="subtitle">Protect your privacy. Choose the right crypto wallet.</div>
@@ -119,27 +143,27 @@
     <div class="card">
       <h3>Monero GUI Wallet</h3>
       <p>Official wallet for Monero, built for true privacy and anonymity.</p>
-      <button>Official Site</button>
+      <a href="https://www.getmonero.org/downloads/"><button>Official Site</button></a>
     </div>
     <div class="card">
       <h3>Samourai Wallet</h3>
       <p>Android wallet with strong coin-mixing and privacy features.</p>
-      <button>Official Site</button>
+      <a href="https://samouraiwallet.com/"><button>Official Site</button></a>
     </div>
     <div class="card">
       <h3>Wasabi Wallet</h3>
       <p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p>
-      <button>Official Site</button>
+      <a href="https://wasabiwallet.io/"><button>Official Site</button></a>
     </div>
     <div class="card">
       <h3>Ledger Nano X</h3>
       <p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p>
-      <button>Buy via Ledger</button>
+      <a href="https://shop.ledger.com/?r=23c3e3baff0d"><button>Buy via Ledger</button></a>
     </div>
     <div class="card">
       <h3>Trezor Model T</h3>
       <p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p>
-      <button>Buy via Trezor</button>
+      <a href="https://trezor.io/trezor-safe-3-bitcoin-only?transaction_id=102ce1e13cfc323e0a78ae1f740267&offer_id=239&affiliate_id=35816"><button>Buy via Trezor</button></a>
     </div>
   </div>
 
@@ -150,6 +174,10 @@
       <button onclick="nextText()">→</button>
     </div>
   </div>
+
+  <footer>
+    © 2025 AnonWallets. No tracking. No compromise. | Contact: <a href="mailto:anonwallets@protonmail.com">anonwallets@protonmail.com</a>
+  </footer>
 
   <script>
     const texts = [
@@ -162,7 +190,11 @@
     const textEl = document.getElementById("carousel-text");
 
     function updateText() {
-      textEl.innerText = texts[currentIndex];
+      textEl.style.opacity = 0;
+      setTimeout(() => {
+        textEl.innerText = texts[currentIndex];
+        textEl.style.opacity = 1;
+      }, 300);
     }
 
     function nextText() {
