@@ -1,52 +1,102 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AnonWallets - Private Crypto Wallets</title>
-  <meta name="description" content="Explore anonymous and privacy-focused crypto wallets. Find the best tools for secure, trace-free transactions.">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AnonWallets - Private Crypto Wallets</title>
+<meta content="Explore anonymous and privacy-focused crypto wallets. Find the best tools for secure, trace-free transactions." name="description"/>
+<!-- Open Graph metadata -->
+<meta content="AnonWallets - Private Crypto Wallets" property="og:title"/>
+<meta content="Top privacy wallets for crypto users who care about anonymity and security." property="og:description"/>
+<meta content="https://anonwallets.vercel.app/logo.png" property="og:image"/>
+<meta content="https://anonwallets.vercel.app" property="og:url"/>
+<meta content="website" property="og:type"/>
+<!-- Twitter Card metadata -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AnonWallets - Private Crypto Wallets" name="twitter:title"/>
+<meta content="Top privacy wallets for crypto users who care about anonymity and security." name="twitter:description"/>
+<meta content="https://anonwallets.vercel.app/logo.png" name="twitter:image"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://anonwallets.vercel.app/logo.png" rel="icon" type="image/png"/>
 </head>
-<body class="fade-in">
-  <header class="glow-header">
-    <img src="anonwallets-logo.png" alt="AnonWallets Logo" class="logo" />
-    <h1>AnonWallets</h1>
-    <p class="tagline">Anonymous. Secure. Untraceable.</p>
-    <div class="intro-message">
-      <p>
-        AnonWallets is your curated list of privacy-first crypto wallets. Whether you're seeking complete anonymity, no-KYC usage, or open-source transparency — we've gathered the best tools for self-custody and sovereignty. No tracking, no noise — just privacy.
-      </p>
-    </div>
-  </header>
+<body>
+<header>
+<img alt="AnonWallets Logo" class="logo" src="anonwallets-logo.png"/>
+<h1>AnonWallets</h1>
+<p>Protect your privacy. Choose the right crypto wallet.</p>
+</header>
+<section class="wallets">
+<div class="wallet-card">
+<h2>Monero GUI Wallet</h2>
+<p>Official wallet for Monero, built for true privacy and anonymity.</p>
+<a class="btn" href="https://www.getmonero.org/downloads/" target="_blank">Official Site</a>
+</div>
+<div class="wallet-card">
+<h2>Samourai Wallet</h2>
+<p>Android wallet with strong coin-mixing and privacy features.</p>
+<a class="btn" href="https://samouraiwallet.com/" target="_blank">Official Site</a>
+</div>
+<div class="wallet-card">
+<h2>Wasabi Wallet</h2>
+<p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p>
+<a class="btn" href="https://www.wasabiwallet.io/" target="_blank">Official Site</a>
+</div>
+<div class="wallet-card">
+<h2>Ledger Nano X</h2>
+<p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p>
+<a class="btn" href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy via Ledger</a>
+</div>
+<div class="wallet-card">
+<h2>Trezor Model T</h2>
+<p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p>
+<a class="btn" href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Buy via Trezor</a>
+</div>
+</section>
+<footer>
+<p>© 2025 AnonWallets. No tracking. No compromise.</p>
+</footer>
 
-  <section class="wallets">
-    <div class="wallet-card"><h2>Monero GUI Wallet</h2><p>Official wallet for Monero, built for true privacy and anonymity.</p><a href="https://www.getmonero.org/downloads/" class="btn" target="_blank">Official Site</a></div>
-    <div class="wallet-card"><h2>Samourai Wallet</h2><p>Android wallet with strong coin-mixing and privacy features.</p><a href="https://samouraiwallet.com/" class="btn" target="_blank">Official Site</a></div>
-    <div class="wallet-card"><h2>Wasabi Wallet</h2><p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p><a href="https://www.wasabiwallet.io/" class="btn" target="_blank">Official Site</a></div>
-    <div class="wallet-card"><h2>Ledger Nano X</h2><p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p><a href="https://shop.ledger.com/?r=23c3e3baff0d" class="btn" target="_blank">Buy via Ledger</a></div>
-    <div class="wallet-card"><h2>Trezor Model T</h2><p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p><a href="https://affil.trezor.io/aff_c?offer_id=239&aff_id=35816" class="btn" target="_blank">Buy via Trezor</a></div>
-  </section>
+<section class="info-section">
+<h2>Why Cold Wallets Matter</h2>
+<div class="info-carousel">
+<button class="info-prev">&lt;</button>
+<div class="info-text" id="infoText">Cold wallets store your assets offline, away from hackers.</div>
+<button class="info-next">&gt;</button>
+</div>
+</section>
 
-  <section class="sponsor-suggestion">
-    <h2>Suggest a Wallet or Sponsor a Listing</h2>
-    <p>Know a great privacy wallet or want to sponsor a listing? Use the form below.</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <select name="type" required>
-        <option value="">Select Topic</option>
-        <option value="suggestion">Suggest a Wallet</option>
-        <option value="sponsorship">Sponsor a Listing</option>
-      </select>
-      <textarea name="message" placeholder="Your message..." rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <p class="disclaimer">We only list tools that respect user privacy and have no tracking. Sponsorship does not guarantee inclusion.</p>
-  </section>
+<script>
+  const messages = [
+    "Cold wallets store your assets offline, away from hackers.",
+    "They offer maximum protection by keeping your keys out of the internet.",
+    "Great for long-term storage of large crypto amounts.",
+    "Creating a cold wallet ensures you control your funds."
+  ];
+  let i = 0;
+  const text = document.getElementById("infoText");
+  const prevBtn = document.querySelector(".info-prev");
+  const nextBtn = document.querySelector(".info-next");
 
-  <footer>
-    <p>&copy; 2025 AnonWallets. No tracking. No compromise.</p>
-  </footer>
+  function updateText(index) {
+    text.classList.remove("fade-in");
+    text.classList.add("fade-out");
+    setTimeout(() => {
+      text.textContent = messages[index];
+      text.classList.remove("fade-out");
+      text.classList.add("fade-in");
+    }, 300);
+  }
+
+  nextBtn.onclick = () => {
+    i = (i + 1) % messages.length;
+    updateText(i);
+  };
+
+  prevBtn.onclick = () => {
+    i = (i - 1 + messages.length) % messages.length;
+    updateText(i);
+  };
+</script>
 </body>
 </html>
