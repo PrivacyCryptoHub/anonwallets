@@ -1,213 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AnonWallets</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      background: url('images/background.png') no-repeat center center fixed;
-      background-size: cover;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnonWallets - Secure Your Crypto</title>
 
-    .logo-container {
-      background-color: rgba(0, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 30px;
-      text-align: center;
-      margin: 30px auto 10px;
-      width: 320px;
-    }
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="AnonWallets - Secure Your Crypto" />
+    <meta property="og:description" content="Find the best anonymous wallets to protect your privacy and security." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/anonwallets-logo.png" />
+    <meta property="og:url" content="https://privacycryptohub.github.io/anonwallets/" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    .logo-container img {
-      width: 100%;
-      height: auto;
-    }
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 
-    .title {
-      text-align: center;
-      font-size: 2.8rem;
-      margin: 10px 0;
-    }
-
-    .subtitle {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-    }
-
-    .section {
-      background-color: rgba(0, 0, 0, 0.6);
-      margin: 20px;
-      padding: 20px;
-      border-radius: 20px;
-    }
-
-    .section h2 {
-      color: cyan;
-      text-align: center;
-    }
-
-    .wallet-cards {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .card {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 15px;
-      width: 280px;
-      box-shadow: 0 0 15px cyan;
-      text-align: center;
-    }
-
-    .card button {
-      margin-top: 10px;
-      background-color: cyan;
-      color: black;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .carousel {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 30px;
-      text-align: center;
-      color: cyan;
-      border-radius: 20px;
-      margin: 40px 20px;
-      position: relative;
-      transition: all 0.5s ease-in-out;
-    }
-
-    .carousel-text {
-      font-size: 1.2rem;
-      min-height: 60px;
-      transition: opacity 0.6s ease-in-out;
-    }
-
-    .carousel-buttons {
-      margin-top: 20px;
-    }
-
-    .carousel-buttons button {
-      background: none;
-      border: 2px solid cyan;
-      color: cyan;
-      padding: 8px 16px;
-      margin: 0 10px;
-      border-radius: 10px;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: rgba(0,0,0,0.6);
-      color: cyan;
-      font-size: 0.9rem;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: cyan;
-      text-decoration: underline;
-    }
-  </style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: url('https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/background.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .logo-container {
+            background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 25px;
+            text-align: center;
+            margin: 40px auto 20px;
+            width: 300px;
+            padding: 20px;
+        }
+        .logo-container img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        .section {
+            background: rgba(0, 0, 0, 0.6);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        h1, h2 {
+            color: cyan;
+            text-align: center;
+        }
+        .wallet-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid cyan;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 10px;
+            max-width: 500px;
+        }
+        .wallet-card a {
+            color: cyan;
+            font-weight: bold;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <div class="logo-container">
-    <img src="images/anonwallets-logo.png" alt="AnonWallets Logo">
-  </div>
-  <div class="title">AnonWallets</div>
-  <div class="subtitle">Protect your privacy. Choose the right crypto wallet.</div>
-
-  <div class="section">
-    <h2>Why Anonymous Wallets?</h2>
-    <p>Privacy isn't just a feature — it's a right. <strong>AnonWallets</strong> helps users take control of their financial sovereignty by guiding them through trusted and secure wallet options, without KYC, tracking, or marketing fluff.</p>
-  </div>
-
-  <div class="wallet-cards">
-    <div class="card">
-      <h3>Monero GUI Wallet</h3>
-      <p>Official wallet for Monero, built for true privacy and anonymity.</p>
-      <a href="https://www.getmonero.org/downloads/"><button>Official Site</button></a>
+    <div class="logo-container">
+        <img src="https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/anonwallets-logo.png" alt="AnonWallets Logo" />
     </div>
-    <div class="card">
-      <h3>Samourai Wallet</h3>
-      <p>Android wallet with strong coin-mixing and privacy features.</p>
-      <a href="https://samouraiwallet.com/"><button>Official Site</button></a>
+
+    <h1>AnonWallets</h1>
+    <p style="text-align:center;">Protect your privacy. Choose the right crypto wallet.</p>
+
+    <div class="section">
+        <h2>Why Anonymous Wallets?</h2>
+        <p>
+            Privacy isn't just a feature — it's a right. <strong>AnonWallets</strong> helps users take control of their
+            financial sovereignty by guiding them through trusted and secure wallet options, without KYC, tracking, or marketing fluff.
+        </p>
     </div>
-    <div class="card">
-      <h3>Wasabi Wallet</h3>
-      <p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p>
-      <a href="https://wasabiwallet.io/"><button>Official Site</button></a>
+
+    <div class="wallet-card">
+        <h3>Monero GUI Wallet</h3>
+        <p>Official wallet for Monero, built for true privacy and anonymity.</p>
+        <a href="https://www.getmonero.org/downloads/" target="_blank">Official Site</a>
     </div>
-    <div class="card">
-      <h3>Ledger Nano X</h3>
-      <p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p>
-      <a href="https://shop.ledger.com/?r=23c3e3baff0d"><button>Buy via Ledger</button></a>
+    <div class="wallet-card">
+        <h3>Samourai Wallet</h3>
+        <p>Android wallet with strong coin-mixing and privacy features.</p>
+        <a href="https://samouraiwallet.com/" target="_blank">Official Site</a>
     </div>
-    <div class="card">
-      <h3>Trezor Model T</h3>
-      <p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p>
-      <a href="https://trezor.io/trezor-safe-3-bitcoin-only?transaction_id=102ce1e13cfc323e0a78ae1f740267&offer_id=239&affiliate_id=35816"><button>Buy via Trezor</button></a>
+    <div class="wallet-card">
+        <h3>Wasabi Wallet</h3>
+        <p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p>
+        <a href="https://wasabiwallet.io/" target="_blank">Official Site</a>
     </div>
-  </div>
-
-  <div class="carousel">
-    <div class="carousel-text" id="carousel-text">Cold wallets are offline storage, keeping your keys out of hackers’ reach.</div>
-    <div class="carousel-buttons">
-      <button onclick="prevText()">←</button>
-      <button onclick="nextText()">→</button>
+    <div class="wallet-card">
+        <h3>Ledger Nano X</h3>
+        <p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p>
+        <a href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy via Ledger</a>
     </div>
-  </div>
+    <div class="wallet-card">
+        <h3>Trezor Model T</h3>
+        <p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p>
+        <a href="https://trezor.io/trezor-safe-3-bitcoin-only?transaction_id=102ce1e13cfc323e0a78ae1f740267&offer_id=239&affiliate_id=35816" target="_blank">Buy via Trezor</a>
+    </div>
 
-  <footer>
-    © 2025 AnonWallets. No tracking. No compromise. | Contact: <a href="mailto:anonwallets@protonmail.com">anonwallets@protonmail.com</a>
-  </footer>
-
-  <script>
-    const texts = [
-      "Cold wallets are offline storage, keeping your keys out of hackers’ reach.",
-      "They are more secure for long-term holdings as they aren’t connected to the internet.",
-      "Using cold wallets ensures better anonymity and sovereignty.",
-      "Ideal for HODLers and privacy-focused users."
-    ];
-    let currentIndex = 0;
-    const textEl = document.getElementById("carousel-text");
-
-    function updateText() {
-      textEl.style.opacity = 0;
-      setTimeout(() => {
-        textEl.innerText = texts[currentIndex];
-        textEl.style.opacity = 1;
-      }, 300);
-    }
-
-    function nextText() {
-      currentIndex = (currentIndex + 1) % texts.length;
-      updateText();
-    }
-
-    function prevText() {
-      currentIndex = (currentIndex - 1 + texts.length) % texts.length;
-      updateText();
-    }
-
-    setInterval(nextText, 5000);
-  </script>
+    <div class="footer">
+        &copy; 2025 AnonWallets. No tracking. No compromise.<br />
+        Contact: <a href="mailto:anonwallets@protonmail.com">anonwallets@protonmail.com</a><br />
+        Contribute or suggest: <a href="https://github.com/PrivacyCryptoHub/anonwallets" target="_blank">GitHub Repo</a>
+    </div>
 </body>
 </html>
