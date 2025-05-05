@@ -5,141 +5,196 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AnonWallets - Private Crypto Wallets</title>
-<meta content="Explore anonymous and privacy-focused crypto wallets. Find the best tools for secure, trace-free transactions." name="description"/>
-<!-- Open Graph metadata -->
-<meta content="AnonWallets - Private Crypto Wallets" property="og:title"/>
-<meta content="Top privacy wallets for crypto users who care about anonymity and security." property="og:description"/>
-<meta content="https://anonwallets.vercel.app/logo.png" property="og:image"/>
+<title>AnonWallets</title>
+<meta content="AnonWallets" property="og:title"/>
+<meta content="Explore anonymous crypto wallets without KYC or tracking." property="og:description"/>
+<meta content="https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/anonwallets-logo.png" property="og:image"/>
 <meta content="https://anonwallets.vercel.app" property="og:url"/>
-<meta content="website" property="og:type"/>
-<!-- Twitter Card metadata -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="AnonWallets - Private Crypto Wallets" name="twitter:title"/>
-<meta content="Top privacy wallets for crypto users who care about anonymity and security." name="twitter:description"/>
-<meta content="https://anonwallets.vercel.app/logo.png" name="twitter:image"/>
-<link href="styles_with_background.css" rel="stylesheet"/>
-<link href="https://anonwallets.vercel.app/logo.png" rel="icon" type="image/png"/>
 <style>
+    @keyframes backgroundShift {
+      0% { background-color: #000000; }
+      50% { background-color: #003333; }
+      100% { background-color: #000000; }
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background: url('A_digital_artwork_in_sci-fi_and_cyberpunk_art_styl.png') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
       font-family: Arial, sans-serif;
+      animation: backgroundShift 10s infinite;
+      color: white;
+      overflow-x: hidden;
     }
-    header, footer {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 1rem;
+
+    .logo-container {
+      background-color: rgba(0, 255, 255, 0.1);
+      padding: 1em;
+      border-radius: 20px;
+      margin: 20px auto;
+      width: fit-content;
+    }
+
+    .logo-container img {
+      display: block;
+      width: 200px;
+      height: auto;
+      margin: 0 auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+
+    h1, h2 {
       text-align: center;
+      color: #00ffff;
     }
-    .wallets {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
+
+    .card, .review {
+      border: 2px solid #00ffff;
+      border-radius: 15px;
+      padding: 1em;
+      margin: 1em auto;
       background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 20px #00ffff;
+      max-width: 600px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
-    .wallet-card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem;
-      border-radius: 8px;
+
+    .card h3, .review h3 {
+      color: #00ffff;
       text-align: center;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #00ffc3;
-      color: #0d0d0d;
+
+    .card p, .review p {
+      text-align: center;
+      color: #00ffff;
+      border-top: 1px solid #00ffff;
+      padding: 8px 0;
+      margin: 0;
+    }
+
+    .card a, .review a {
+      display: block;
+      text-align: center;
+      background-color: #00ffff;
+      color: black;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 20px auto 0;
+      width: fit-content;
       text-decoration: none;
-      border-radius: 5px;
+      font-weight: bold;
     }
-    .logo {
-      height: 64px;
+
+    .cold-wallet-info {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #00ffff;
+      padding: 1em;
+      margin: 2em auto;
+      border-radius: 12px;
+      max-width: 700px;
+      text-align: center;
+      transition: opacity 1s ease-in-out;
     }
-  
-.intro {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  color: #e0f7fa;
-  text-align: center;
-}
 
-.intro h2 {
-  font-size: 1.8rem;
-  color: #00ffc3;
-  margin-bottom: 1rem;
-}
+    .cold-wallet-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin-top: 1em;
+    }
 
-.intro {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.4); /* läpikuultava musta */
-  border-radius: 10px;
-  color: #e0f7fa;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
+    .cold-wallet-controls button {
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
-.intro h2 {
-  font-size: 1.8rem;
-  color: #00ffc3;
-  margin-bottom: 1rem;
-}
-</style>
+    footer {
+      text-align: center;
+      padding: 2em;
+      font-size: 0.9em;
+      color: #00ffff;
+    }
+
+    footer a {
+      color: #00ffff;
+    }
+  </style>
 </head>
-<body>
-<header>
-<img alt="AnonWallets Logo" class="logo" src="anonwallets-logo.png" style="width: 240px; border-radius: 20px; padding: 10px; background-color: rgba(0, 255, 255, 0.15);"/>
+<body style="background: url('turquoise-lock-background.png') no-repeat center center fixed; background-size: cover;">
+<div class="logo-container">
+<img alt="AnonWallets Logo" src="anonwallets-logo.png"/>
+</div>
 <h1>AnonWallets</h1>
-<p>Protect your privacy. Choose the right crypto wallet.</p>
-</header>
-<section class="intro">
+<p style="text-align: center;">Protect your privacy. Choose the right crypto wallet.</p>
+<section class="card">
 <h2>Why Anonymous Wallets?</h2>
-<p>
-    Privacy isn't just a feature — it's a right. <strong>AnonWallets</strong> helps users take control of their financial sovereignty by guiding them through trusted and secure wallet options, without KYC, tracking, or marketing fluff.
-  </p>
+<p>Privacy isn't just a feature — it's a right. <strong>AnonWallets</strong> helps users take control of their financial sovereignty by guiding them through trusted and secure wallet options, without KYC, tracking, or marketing fluff.</p>
 </section>
-<section class="wallets">
-<div class="wallet-card">
-<h2>Monero GUI Wallet</h2>
-<p>Official wallet for Monero, built for true privacy and anonymity.</p>
-<a class="btn" href="https://www.getmonero.org/downloads/" target="_blank">Official Site</a>
+<!-- Lompakkokortit oikeassa järjestyksessä -->
+<div class="card"><h3>Samourai Wallet</h3><p>Android wallet with strong coin-mixing and privacy features.</p><a href="https://samouraiwallet.com" target="_blank">Visit Samourai</a></div>
+<div class="card"><h3>Monero GUI Wallet</h3><p>Official wallet for Monero, built for true privacy and anonymity.</p><a href="https://www.getmonero.org/downloads/" target="_blank">Visit Monero</a></div>
+<div class="card"><h3>Wasabi Wallet</h3><p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p><a href="https://wasabiwallet.io" target="_blank">Visit Wasabi</a></div>
+<div class="card"><h3>Trezor Model T</h3><p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p><a href="https://trezor.io/trezor-safe-3-bitcoin-only?transaction_id=102ce1e13cfc323e0a78ae1f740267&amp;offer_id=239&amp;affiliate_id=35816" target="_blank">Buy via Trezor</a></div>
+<div class="card"><h3>Ledger Nano X</h3><p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p><a href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy via Ledger</a></div>
+<!-- Cold Wallet Info -osio -->
+<div class="cold-wallet-info" id="walletInfo">
+<h2>What Are Cold Wallets?</h2>
+<p id="walletText">Cold wallets are offline wallets that store your crypto securely away from the internet.</p>
+<div class="cold-wallet-controls">
+<button onclick="prevWallet()">◀</button>
+<button onclick="nextWallet()">▶</button>
 </div>
-<div class="wallet-card">
-<h2>Samourai Wallet</h2>
-<p>Android wallet with strong coin-mixing and privacy features.</p>
-<a class="btn" href="https://samouraiwallet.com/" target="_blank">Official Site</a>
 </div>
-<div class="wallet-card">
-<h2>Wasabi Wallet</h2>
-<p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p>
-<a class="btn" href="https://www.wasabiwallet.io/" target="_blank">Official Site</a>
-</div>
-<div class="wallet-card">
-<h2>Ledger Nano X</h2>
-<p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p>
-<a class="btn" href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy via Ledger</a>
-</div>
-<div class="wallet-card">
-<h2>Trezor Model T</h2>
-<p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p>
-<a class="btn" href="https://affil.trezor.io/aff_c?offer_id=239&amp;aff_id=35816" target="_blank">Buy via Trezor</a>
-</div>
+<script>
+const texts = [
+  "Cold wallets are offline wallets that store your crypto securely away from the internet.",
+  "They are immune to online hacks and phishing attacks.",
+  "Examples include hardware wallets like Ledger and Trezor.",
+  "Cold wallets provide maximum control and privacy over your crypto.",
+  "Creating and using a cold wallet is essential for long-term crypto holders."
+];
+let current = 0;
+const textElement = document.getElementById("walletText");
+
+function updateWalletText() {
+  textElement.style.opacity = 0;
+  setTimeout(() => {
+    textElement.innerText = texts[current];
+    textElement.style.opacity = 1;
+  }, 500);
+}
+
+function nextWallet() {
+  current = (current + 1) % texts.length;
+  updateWalletText();
+}
+
+function prevWallet() {
+  current = (current - 1 + texts.length) % texts.length;
+  updateWalletText();
+}
+
+setInterval(nextWallet, 5000);
+</script>
+<!-- Arvostelut -->
+<section id="wallet-review-section">
+<h2 style="color:#00ffff; text-align:center; text-shadow: 0 0 10px #00ffff; margin-top:50px;">Wallet Review Tables</h2>
+<div class="review"><h3>Samourai Wallet</h3><p>Strong privacy tools (Stonewall, Ricochet)</p><p>Designed for anonymity</p><p>Android only</p><p>Advanced features</p></div>
+<div class="review"><h3>Monero GUI Wallet</h3><p>Full node wallet</p><p>Community maintained</p><p>Open source</p><p>Requires full sync</p></div>
+<div class="review"><h3>Wasabi Wallet</h3><p>CoinJoin + Tor</p><p>Desktop only</p><p>Trust in coordinator</p></div>
+<div class="review"><h3>Trezor Model T</h3><p>Open-source firmware</p><p>User-friendly</p><p>Good security</p></div>
+<div class="review"><h3>Ledger Nano X</h3><p>Supports many coins</p><p>Mobile &amp; Desktop</p><p>Secure chip</p></div>
 </section>
 <footer>
-<p>© 2025 AnonWallets. No tracking. No compromise.</p>
+<p>© 2025 AnonWallets. No tracking. No compromise.<br/>
+    Contact: <a href="mailto:anonwallets@protonmail.com">anonwallets@protonmail.com</a><br/>
+    Contribute or suggest: <a href="https://github.com/PrivacyCryptoHub/anonwallets" target="_blank">GitHub Repo</a>
+</p>
 </footer>
-<section class="contact" style="text-align: center; margin: 2rem auto; color: #ccc;">
-<p>Contact: <a href="mailto:anonwallets@protonmail.com" style="color: #00ffc3;">anonwallets@protonmail.com</a></p>
-<p>Contribute or suggest: <a href="https://github.com/PrivacyCryptoHub/anonwallets" style="color: #00ffc3;" target="_blank">GitHub Repo</a></p>
-</section>
 </body>
 </html>
