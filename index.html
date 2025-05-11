@@ -6,22 +6,22 @@
 <!-- Open Graph Meta -->
 <meta content="AnonWallets - Private Crypto Wallets" property="og:title"/>
 <meta content="Explore anonymous crypto wallets without KYC or tracking." property="og:description"/>
-<meta content="https://anonwallets.vercel.app/anonwallets-whatsapp-preview-1200x1200.png" property="og:image"/>
+<meta content="https://anonwallets.vercel.app/background.png" property="og:image"/>
 <meta content="https://anonwallets.vercel.app" property="og:url"/>
 <meta content="website" property="og:type"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="AnonWallets - Private Crypto Wallets" name="twitter:title"/>
 <meta content="Explore anonymous crypto wallets without KYC or tracking." name="twitter:description"/>
-<meta content="https://anonwallets.vercel.app/anonwallets-whatsapp-preview-1200x1200.png" name="twitter:image"/>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="https://anonwallets.vercel.app/background.png" name="twitter:image"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AnonWallets</title>
-<meta content="AnonWallets" property="og:title">
-<meta content="Explore anonymous crypto wallets without KYC or tracking." property="og:description">
-<meta content="https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/anonwallets-logo.png" property="og:image">
-<meta content="https://anonwallets.vercel.app" property="og:url">
-<meta content="summary_large_image" name="twitter:card">
+<meta content="AnonWallets" property="og:title"/>
+<meta content="Explore anonymous crypto wallets without KYC or tracking." property="og:description"/>
+<meta content="https://raw.githubusercontent.com/PrivacyCryptoHub/anonwallets/main/anonwallets-logo.png" property="og:image"/>
+<meta content="https://anonwallets.vercel.app" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <style>
     @keyframes backgroundShift {
       0% { background-color: #000000; }
@@ -140,57 +140,154 @@
       color: #00ffff;
     }
   
-    /* Korttien joustava asettelu */
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .card {
-        flex: 1 1 calc(100% - 20px);
-        max-width: 100%;
-        margin: 10px;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 15px;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    @media (min-width: 768px) {
-        .card {
-            flex: 1 1 calc(48% - 20px);
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .card {
-            flex: 1 1 calc(33.33% - 20px);
-        }
-    }
-    </style>
-</meta></meta></meta></meta></meta></meta></meta></head>
-<body style="background: url('turquoise-lock-anonwallets-preview.png') no-repeat center center fixed; background-size: cover;">
-<div class="logo-container">
-<img alt="Anon glowing face logo" src="anonwallets-preview.png" style="
-    width: 100%;
-    max-width: 1600px;  /* Suurempi leveys */
-    height: auto;
-    display: block;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.card {
+    flex: 1 1 280px;
+    max-width: 280px;
+    margin: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    flex: 1 1 280px;
+    max-width: 280px;
+    margin: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 1 1 calc(33% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    flex: 1 1 280px;
+    max-width: 280px;
+    margin: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card.full-width {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+</style>
+</head>
+<body style="background: url('turquoise-lock-background.png') no-repeat center center fixed; background-size: cover;">
+<div class="logo-container">
+<img alt="Anon glowing face logo" src="https://anonwallets.vercel.app/anonwallets-logo.png" style="
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
     "/>
 </div>
+<div class="card-container"><div class="card"><h3>Monero GUI Wallet</h3><p>Official wallet for Monero, built for true privacy and anonymity.</p><a href="https://www.getmonero.org/downloads/" target="_blank">Visit Monero</a></div><div class="card"><h3>Wasabi Wallet</h3><p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p><a href="https://wasabiwallet.io" target="_blank">Visit Wasabi</a></div><div class="card"><h3>Trezor Model T</h3><p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p><a href="https://trezor.io/trezor-safe-3-bitcoin-only?transaction_id=102ce1e13cfc323e0a78ae1f740267&amp;offer_id=239&amp;affiliate_id=35816" target="_blank">Buy via Trezor</a></div><div class="card"><h3>Ledger Nano X</h3><p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p><a href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy via Ledger</a></div></div><div style="text-align: center; margin: 20px;">
+<button onclick="openBlogPopup()" style="background-color: #00ffff; color: #000; padding: 12px 20px; 
+    font-size: 1rem; border: none; border-radius: 8px; cursor: pointer;">Read Blog: Why Anonymous Wallets?</button>
+</div>
+<!-- Blogin ponnahdusikkuna -->
+<div class="popup" id="blogPopup" style="display:none; background: rgba(0,0,0,0.9); padding: 20px; border-radius: 10px; 
+max-width: 600px; margin: 0 auto; color: #00ffff;">
+<h3>Why Anonymous Wallets?</h3>
+<p>Privacy is a right. AnonWallets helps you explore secure and private wallet options.</p>
+<h4>Security Tips:</h4>
+<ul>
+<li>Don't share your seed phrase with anyone.</li>
+<li>Store your seed phrase securely (offline).</li>
+<li>Avoid public Wi-Fi when managing your crypto.</li>
+</ul>
+<h4>Risks &amp; Warnings:</h4>
+<p>Anonymous wallets provide privacy, but be aware of phishing attacks and scams.</p>
+<h4>Recommended Wallets:</h4>
+<a href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Ledger Nano X</a><br/>
+<a href="https://trezor.io/trezor-safe-3-bitcoin-only" target="_blank">Trezor Model T</a>
+<br/><br/>
+<button onclick="closeBlogPopup()" style="background-color: #00ffff; color: #000; padding: 10px 20px; 
+    font-size: 1rem; border: none; border-radius: 8px; cursor: pointer;">Close</button>
+</div>
+<script>
+function openBlogPopup() {
+    document.getElementById('blogPopup').style.display = 'block';
+}
+
+function closeBlogPopup() {
+    document.getElementById('blogPopup').style.display = 'none';
+}
+</script>
+<h1>AnonWallets</h1>
 <p style="text-align: center;">Protect your privacy. Choose the right crypto wallet.</p>
 <section class="card">
 <h2>Why Anonymous Wallets?</h2>
 <p>Privacy isn't just a feature — it's a right. <strong>AnonWallets</strong> helps users take control of their financial sovereignty by guiding them through trusted and secure wallet options, without KYC, tracking, or marketing fluff.</p>
 </section>
 <!-- Lompakkokortit oikeassa järjestyksessä -->
-<div class="card"><h3>Monero GUI Wallet</h3><p>Official wallet for Monero, built for true privacy and anonymity.</p><a href="https://www.getmonero.org/downloads/" target="_blank">Visit Monero</a></div>
-<div class="card"><h3>Wasabi Wallet</h3><p>Bitcoin wallet with built-in CoinJoin mixing. Easy and open-source.</p><a href="https://wasabiwallet.io" target="_blank">Visit Wasabi</a></div>
-<div class="card"><h3>Trezor Model T</h3><p>Next-generation hardware wallet for advanced security. Open-source and easy to use.</p><a href="https://trezor.io/trezor-safe-3-bitcoin-only?transaction_id=102ce1e13cfc323e0a78ae1f740267&amp;offer_id=239&amp;affiliate_id=35816" target="_blank">Buy via Trezor</a></div>
-<div class="card"><h3>Ledger Nano X</h3><p>Secure your crypto offline with Ledger’s hardware wallet. Supports 5000+ coins.</p><a href="https://shop.ledger.com/?r=23c3e3baff0d" target="_blank">Buy via Ledger</a></div>
 <!-- Cold Wallet Info -osio -->
 <div class="cold-wallet-info" id="walletInfo">
 <h2>What Are Cold Wallets?</h2>
