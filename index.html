@@ -38,24 +38,31 @@
     }
 
     .logo-container {
-      background-color: rgba(0, 255, 255, 0.1);
-      padding: 1em;
-      border-radius: 20px;
-      margin: 20px auto;
-      width: fit-content;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 1em;
+    border-radius: 20px;
+}
 
-    .logo-container img {
-     display: block;
-     max-width: 280px;
-     width: 100%;
-     height: auto;
-     margin-left: auto;
-     margin-right: auto;
-     aspect-ratio: 1 / 1;
-     object-fit: cover;
-     border-radius: 20px;
-     box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+.logo-container img {
+    display: block;
+    max-width: 600px; /* Suurempi koko */
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.6); /* Suurempi hehku */
+}
+
 
     }
 
