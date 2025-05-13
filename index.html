@@ -39,7 +39,7 @@
 
     .logo-container {
     width: 100%; /* Kuva täyttää koko leveyden */
-    max-width: 800px; /* Maksimikoko, voit säätää tätä */
+    max-width: 400px; /* Maksimikoko, voit säätää tätä */
     margin: 20px auto;
     padding: 0;
     display: flex;
@@ -49,7 +49,7 @@
 
 .logo-container img {
     width: 100%; /* Kuva mukautuu containerin leveyteen */
-    max-width: 800px; /* Maksimikoko kuvalle */
+    max-width: 400px; /* Maksimikoko kuvalle */
     height: auto;
     object-fit: cover;
     border-radius: 15px; /* Pyöristetyt kulmat pienemmiksi */
@@ -305,7 +305,7 @@ h1 {
 <body style="background: url('turquoise-lock-background.png') no-repeat center center fixed; background-size: cover;">
 <div class="logo-container">
 <img alt="Anon glowing face logo" src="anonwallets-preview.png" style="
-        max-width: 800px; /* Suurempi logo */
+        max-width: 400px; /* Suurempi logo */
         width: 100%;
         height: auto;
         display: block;
@@ -328,8 +328,9 @@ h1 {
         Read Blog: Why Anonymous Wallets?
     </button>
 </div>
-<div class="popup" id="blogPopup" style="display:none; background: rgba(0,0,0,0.9); padding: 20px; border-radius: 10px; 
+<div class="popup" id="blogPopup" style="display:none; position: relative; background: rgba(0,0,0,0.9); padding: 20px; border-radius: 10px; 
 max-width: 600px; margin: 0 auto; color: #00ffff;">
+<button onclick="closeBlogPopup()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 1.2rem; color: #00ffff; cursor: pointer;">✖</button>
 <h3>Why Choose Anonymous Wallets?</h3>
 <p>Privacy is not just a feature – it's a fundamental right. AnonWallets helps you explore and choose the best privacy-focused crypto wallets that do not require KYC, track your transactions, or collect unnecessary user data.</p>
 <h4>Security Tips for Your Wallets:</h4>
