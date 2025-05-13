@@ -38,8 +38,8 @@
     }
 
     .logo-container {
-    width: 80%;
-    max-width: 1000px; /* Voit kasvattaa tätä arvoa */
+    width: 100%; /* Kuva täyttää koko leveyden */
+    max-width: 800px; /* Maksimikoko, voit säätää tätä */
     margin: 20px auto;
     padding: 0;
     display: flex;
@@ -48,12 +48,12 @@
 }
 
 .logo-container img {
-    width: 80%;
-    max-width: 1000px; /* Maksimikoko (leveys) */
+    width: 100%; /* Kuva mukautuu containerin leveyteen */
+    max-width: 800px; /* Maksimikoko kuvalle */
     height: auto;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+    border-radius: 15px; /* Pyöristetyt kulmat pienemmiksi */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6); /* Kevyempi varjo */
 
 
 }
