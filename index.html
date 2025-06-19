@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnonWallets – Cold Wallets & Privacy</title>
+  <link rel="stylesheet" href="anonwallets-style.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +30,7 @@
 
     .logo-container {
       text-align: center;
-      margin: 30px 0 10px;
+      margin: 30px 0;
     }
 
     .logo-container img {
@@ -39,36 +39,12 @@
       box-shadow: 0 0 20px #00ffff;
     }
 
-    .blog-btn {
-      display: inline-block;
-      margin: 10px auto 30px;
-      background-color: #00ffd0;
-      color: #000;
-      padding: 12px 22px;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1em;
-      box-shadow: 0 0 12px rgba(0,255,255,0.4);
-      transition: background 0.3s ease;
-    }
-
-    .blog-btn:hover {
-      background-color: #00e6ba;
-    }
-
-    .center {
-      text-align: center;
-    }
-
     .card-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
       padding: 30px 20px;
-      max-width: 1000px;
-      margin: auto;
     }
 
     .card {
@@ -76,6 +52,8 @@
       border: 1px solid #00ffff;
       border-radius: 12px;
       padding: 20px;
+      width: 100%;
+      max-width: 420px;
       box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     }
 
@@ -107,80 +85,157 @@
       background-color: #001f1f;
     }
 
-    @media (max-width: 768px) {
-      table {
-        border: 0;
-      }
-
-      table thead {
-        display: none;
-      }
-
-      table tr {
-        display: block;
-        margin-bottom: 1rem;
-        border-bottom: 2px solid #00ffff;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 12px;
-      }
-
-      table td {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px 10px;
-        border: none;
-        border-bottom: 1px dashed #00ffff;
-        font-size: 0.95em;
-      }
-
-      table td:last-child {
-        border-bottom: none;
-      }
-
-      table td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        color: #00ffd0;
-        flex-basis: 40%;
-      }
-    }
-
     footer {
       text-align: center;
       padding: 30px 10px;
       font-size: 0.9em;
       color: #ccc;
     }
-  
-    .wide-card {
-      grid-column: span 2;
-      max-width: 100%;
-    }
 
-    @media (min-width: 1000px) {
-      .wide-card {
-        grid-column: span 3;
+    @media (max-width: 768px) {
+      .card-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
       }
     }
-    </style>
+  
+    .header-image {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 30px;
+      border-radius: 8px;
+    }
 
+    .card-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      padding: 30px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+  
+    .blog-btn {
+      display: inline-block;
+      margin: 10px auto 30px;
+      background-color: #00ffd0;
+      color: #000;
+      padding: 12px 22px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 0 0 12px rgba(0,255,255,0.4);
+      transition: background 0.3s ease;
+    }
+
+    .blog-btn:hover {
+      background-color: #00e6ba;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      table tr {
+        margin-bottom: 1rem;
+        border: 1px solid #00ffff;
+        border-radius: 12px;
+        padding: 10px;
+        background-color: rgba(0,0,0,0.5);
+      }
+
+      table td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #00ffff;
+      }
+
+      table td::before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #00ffd0;
+        content: attr(data-label);
+      }
+    }
+
+  
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #00ffff;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  table td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #00ffff;
+  }
+
+  table td::before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #00ffd0;
+    content: attr(data-label);
+  }
+}
+
+  </style>
 </head>
 <body>
   <div class="logo-container">
-    <img src="anonwallets-preview.png" alt="AnonWallets Logo" />
+    <img src="anonwallets-preview.png" alt="AnonWallets Logo">
   </div>
-
   <div class="center">
     <a href="blog.html" class="blog-btn">→ Read Our Privacy Blog</a>
   </div>
 
   <section class="card-section">
-    <div class="card wide-card">
+    <div class="card">
       <h3>What Is Privacy in Crypto?</h3>
       <p>Privacy in crypto means transacting and storing assets without being tracked or profiled. Using non-custodial wallets, privacy coins, and decentralized bridges helps reduce digital footprint.</p>
     </div>
+  </section>
 
+  <section class="card-section">
     <div class="card">
       <h3>Ledger Nano</h3>
       <p>Secure cold wallet with hardware encryption. Excellent for those seeking advanced security features and multi-asset support.</p>
@@ -201,47 +256,56 @@
       <p>The leading privacy coin. Built-in confidentiality for every transaction using stealth addresses and RingCT.</p>
       <a href="https://www.getmonero.org/" class="btn" target="_blank">Get Monero →</a>
     </div>
-
-</section>
+  </section>
 
   <section class="card-section">
     <div class="card">
       <h3>Cold Wallet Comparison</h3>
-      <table>
-        <thead>
-          <tr><th>Wallet</th><th>Type</th><th>Coin Support</th><th>Privacy Features</th><th>Best For</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Wallet">Ledger</td>
-            <td data-label="Type">Hardware</td>
-            <td data-label="Coin Support">BTC, ETH, SOL, +5000</td>
-            <td data-label="Privacy Features">Secure Element</td>
-            <td data-label="Best For">Advanced users</td>
-          </tr>
-          <tr>
-            <td data-label="Wallet">Trezor</td>
-            <td data-label="Type">Hardware</td>
-            <td data-label="Coin Support">BTC, ETH, LTC, +1000</td>
-            <td data-label="Privacy Features">Passphrase, Open Source</td>
-            <td data-label="Best For">Beginner-friendly</td>
-          </tr>
-          <tr>
-            <td data-label="Wallet">Wasabi</td>
-            <td data-label="Type">Software</td>
-            <td data-label="Coin Support">BTC</td>
-            <td data-label="Privacy Features">CoinJoin</td>
-            <td data-label="Best For">BTC Privacy</td>
-          </tr>
-          <tr>
-            <td data-label="Wallet">Monero</td>
-            <td data-label="Type">Blockchain</td>
-            <td data-label="Coin Support">XMR only</td>
-            <td data-label="Privacy Features">RingCT, Stealth Addresses</td>
-            <td data-label="Best For">Complete anonymity</td>
-          </tr>
-        </tbody>
-      </table>
+      
+
+<table>
+  <thead>
+    <tr>
+      <th>Wallet</th>
+      <th>Type</th>
+      <th>Coin Support</th>
+      <th>Privacy Features</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Wallet">Ledger</td>
+      <td data-label="Type">Hardware</td>
+      <td data-label="Coin Support">BTC, ETH, SOL, +5000</td>
+      <td data-label="Privacy Features">Secure Element</td>
+      <td data-label="Best For">Advanced users</td>
+    </tr>
+    <tr>
+      <td data-label="Wallet">Trezor</td>
+      <td data-label="Type">Hardware</td>
+      <td data-label="Coin Support">BTC, ETH, LTC, +1000</td>
+      <td data-label="Privacy Features">Passphrase, Open Source</td>
+      <td data-label="Best For">Beginner-friendly</td>
+    </tr>
+    <tr>
+      <td data-label="Wallet">Wasabi</td>
+      <td data-label="Type">Software</td>
+      <td data-label="Coin Support">BTC</td>
+      <td data-label="Privacy Features">CoinJoin</td>
+      <td data-label="Best For">BTC Privacy</td>
+    </tr>
+    <tr>
+      <td data-label="Wallet">Monero</td>
+      <td data-label="Type">Blockchain</td>
+      <td data-label="Coin Support">XMR only</td>
+      <td data-label="Privacy Features">RingCT, Stealth Addresses</td>
+      <td data-label="Best For">Complete anonymity</td>
+    </tr>
+  </tbody>
+</table>
+
+
     </div>
   </section>
 
